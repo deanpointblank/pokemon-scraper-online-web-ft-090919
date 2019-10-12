@@ -27,7 +27,6 @@ class Pokemon
     SQL
     
     db.execute(sql, id).map do |row|
-      new_pokemon = self.new(row)
       new_pokemon
     end
   end

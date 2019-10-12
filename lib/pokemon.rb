@@ -27,7 +27,6 @@ class Pokemon
     SQL
     
     db.execute(sql, id).map do |row|
-      binding.pry
       new_pokemon = self.new
       new_pokemon.id = row[0]
       new_pokemon.name = row[1]

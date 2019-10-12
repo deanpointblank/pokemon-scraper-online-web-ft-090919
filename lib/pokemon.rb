@@ -16,7 +16,7 @@ class Pokemon
       VALUES (?, ?);
     SQL
     #binding.pry
-    db.execute(sql, self.name, self.type)
+    db.execute(sql, name, type)
     @id = db.execute("SELECT last_insert_rowid() FROM pokemon")
   end
 end

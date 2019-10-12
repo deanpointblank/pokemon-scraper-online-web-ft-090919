@@ -27,7 +27,7 @@ class Pokemon
     SQL
     
     db.execute(sql, id).map do |row|
-      new_pokemon
+      binding.pry
     end
   end
 end

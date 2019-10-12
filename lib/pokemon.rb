@@ -15,7 +15,6 @@ class Pokemon
       INSERT INTO pokemon (name, type)
       VALUES (?, ?);
     SQL
-    #binding.pry
     db.execute(sql, name, type)
     @id = db.execute("SELECT last_insert_rowid() FROM pokemon")
   end
@@ -28,6 +27,7 @@ class Pokemon
     SQL
     
     db.execute(sql, id).map do |row|
+      binding.pry
       self.new(row)
     end.first
   end

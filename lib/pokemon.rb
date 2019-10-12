@@ -33,6 +33,6 @@ class Pokemon
       new_pokemon.name = row[1]
       new_pokemon.type = row[2]
       new_pokemon
-    end.first
+    end
   end
 end
